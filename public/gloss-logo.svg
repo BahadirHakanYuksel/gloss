@@ -1,0 +1,57 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for modern look -->
+    <linearGradient id="glossGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#6366F1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#A855F7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+    
+    <!-- Glow effect -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle for accent -->
+  <circle cx="20" cy="30" r="8" fill="url(#glossGradient)" opacity="0.2"/>
+  
+  <!-- System waves/signals -->
+  <g opacity="0.6">
+    <path d="M15 25 Q20 20 25 25 Q30 30 35 25" stroke="url(#glossGradient)" stroke-width="2" fill="none"/>
+    <path d="M15 30 Q20 25 25 30 Q30 35 35 30" stroke="url(#glossGradient)" stroke-width="2" fill="none"/>
+    <path d="M15 35 Q20 30 25 35 Q30 40 35 35" stroke="url(#glossGradient)" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Main GLOSS text -->
+  <text x="50" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="700" 
+        fill="url(#glossGradient)" filter="url(#glow)">GLOSS</text>
+  
+  <!-- Subtitle -->
+  <text x="50" y="52" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="400" 
+        fill="#6B7280" opacity="0.8">GitHub LinkedIn Open Source System</text>
+
+  <!-- Network nodes (representing system) -->
+  <g opacity="0.4">
+    <circle cx="170" cy="15" r="2" fill="url(#glossGradient)"/>
+    <circle cx="180" cy="20" r="2" fill="url(#glossGradient)"/>
+    <circle cx="175" cy="25" r="2" fill="url(#glossGradient)"/>
+    <circle cx="185" cy="30" r="2" fill="url(#glossGradient)"/>
+    
+    <!-- Connection lines -->
+    <line x1="170" y1="15" x2="180" y2="20" stroke="url(#glossGradient)" stroke-width="1"/>
+    <line x1="180" y1="20" x2="175" y2="25" stroke="url(#glossGradient)" stroke-width="1"/>
+    <line x1="175" y1="25" x2="185" y2="30" stroke="url(#glossGradient)" stroke-width="1"/>
+  </g>
+</svg>
